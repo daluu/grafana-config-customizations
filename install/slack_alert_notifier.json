@@ -1,0 +1,12 @@
+{
+  "name": "Slack Alert Notifier",
+  "type":  "slack",
+  "isDefault": true,
+  "sendReminder": false,
+  "settings": {
+  	"uploadImage": true,
+    "url": "https://hooks.slack.com/services/FOO/BAR/TESTING123",
+    "recipient": "#ops_channel",
+    "mention": "@here"
+  }
+}
