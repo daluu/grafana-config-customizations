@@ -12,11 +12,11 @@ The build args to pass in environment variables are optional if you don't want t
 
 To verify config:
 
-`docker run --rm -it -p 3000:3000 grafana customized-grafana`
+`docker run --rm -it -p 3000:3000 grafana your_image_name`
 
 then open http://localhost:3000, and login with the default (admin,admin). Browse the UI and verify the alert notification channels created during build/deployment. Not sure if you can verify the SMTP email configuration and external image storage configuration in UI. If not, can do so from the shell, something like:
 
-`docker run --rm -it -p 3000:3000 customized-grafana bash`
+`docker run --rm -it -p 3000:3000 your_image_name bash`
 
 and then navigate to `/opt/grafana/conf/defaults.ini` to view the customized configuration. To start up grafana dashboard from bash shell run `/opt/grafana/bin/grafana-server -homepath /opt/grafana`. I might have edited the wrong INI file in this demo, but you get the gist of what needs to be done.
 
