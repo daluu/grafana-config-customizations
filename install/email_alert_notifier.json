@@ -1,0 +1,10 @@
+{
+  "name": "Email Alert Notifier",
+  "type":  "email",
+  "isDefault": true,
+  "sendReminder": false,
+  "settings": {
+  	"uploadImage": true,
+    "addresses": "ops@mine.com"
+  }
+}

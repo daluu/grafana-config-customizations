@@ -1,0 +1,20 @@
+server {
+    listen 8080;
+
+    access_log /var/log/nginx/graphite.access.log;
+    error_log /var/log/nginx/graphite.error.log;
+
+    root /opt/graphite/webapp;
+
+    location /static/admin/ {
+        alias /usr/local/lib/python2.7/site-packages/django/contrib/static/media/;
+    }
+
+    location /content {
+    }
+
+    location  / {
+        include uwsgi_params;
+        uwsgi_pass 127.0.0.1:3031;
+    }
+}
