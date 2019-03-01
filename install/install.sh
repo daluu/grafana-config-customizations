@@ -55,6 +55,7 @@ curl -d "@slack_alert_notifier.json" -H "Content-Type: application/json" -X POST
 # for more details on the alert setup API
 # http://docs.grafana.org/http_api/alerting/
 # http://docs.grafana.org/alerting/notifications/#all-supported-notifier
+# NOTE: no need to stop the grafana server, it will be terminated at end of (docker) build while persisting the API changes to file in the docker image
 
 # Graphite
 cd /root
